@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+		  {{content}}
+		</section>
+		 <aside id="sidebar">
+           {% include aside.html %}
+         </aside>
+	  </div>
+	</div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
