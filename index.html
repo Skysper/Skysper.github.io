@@ -11,7 +11,7 @@ layout: default
 	   <a class="anchor" href="#{{ post.title}}">
 	      <span aria-hidden="true" class="octicon octicon-link"></span>
 	   </a>
-	   <a href="{{ post.url | prepend: site.baseurl }}">
+	   <a href="{{ post.url | prepend: site.url }}">
 	   {{ post.title }}
 	   </a>
 	</h3>
@@ -20,6 +20,6 @@ layout: default
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.url }}">via RSS</a></p>
 
 </div>
