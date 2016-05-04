@@ -15,8 +15,11 @@ url: "http://skysper.me" # the base hostname & protocol for your site
 
 
 # Build settings
-#markdown: rdiscount
+author: skysper
+email: wtwpfwd0708@126.com
+markdown: rdiscount
 permalink: /:year/:month/:day/:title/
 exclude: ["Rakefile", "CNAME", "README.md"]
-highlighter: pygments
+pygments: true
 paginate: 10
+safe: true
