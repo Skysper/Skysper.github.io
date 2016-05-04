@@ -19,4 +19,5 @@ markdown: rdiscount
 permalink: /:year/:month/:day/:title/
 exclude: ["Rakefile", "CNAME", "README.md"]
 safe: true
+highlighter: pygments
 paginate: 16
