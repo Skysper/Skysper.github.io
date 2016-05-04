@@ -18,9 +18,11 @@ url: "http://skysper.me" # the base hostname & protocol for your site
 gems: [jekyll-paginate]
 author: skysper
 email: wtwpfwd0708@126.com
+auto: true
 markdown: rdiscount
-permalink: /:year/:month/:day/:title/
-exclude: ["Rakefile", "CNAME", "README.md"]
+pygments: true
 highlighter: pygments
+exclude: ["Rakefile", "CNAME", "README.md"]
+permalink: /:year/:month/:title
 paginate: 10
-safe: true
+paginate_path: "/page:num"
