@@ -15,9 +15,8 @@ url: "http://skysper.me" # the base hostname & protocol for your site
 
 
 # Build settings
-markdown: rdiscount
+#markdown: rdiscount
 permalink: /:year/:month/:day/:title/
 exclude: ["Rakefile", "CNAME", "README.md"]
-safe: true
 highlighter: pygments
-paginate: 16
+paginate: 10
