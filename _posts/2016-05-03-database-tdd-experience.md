@@ -12,7 +12,7 @@ desc: "测试驱动开发能够很好的提高系统开发效率，而有关数�
 当然，如果大家有好的测试驱动实践，请不吝赐教。
 ### 开发实践 ###
 1 强制失败，驱动用例适应性修改
-``` c#
+```
 [TestCase("1,2,3,4,5,6,7,8,9,112")]
 public void FindIdsExist(string ids)
 {
@@ -33,7 +33,7 @@ public void FindIdsExist(string ids)
 2 循环查询法
 
 设定一个循环次数上限，通过查询获取特定的数据，用来进行测试判断
-``` c#
+```
 public void UpdateStatus()
 {
     IProjectApplyBLL iProjectApply = EngineContext.CurrentContainerManager.Resolve<IProjectApplyBLL>();
