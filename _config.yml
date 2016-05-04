@@ -13,15 +13,12 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://skysper.me" # the base hostname & protocol for your site
 
-
 # Build settings
 gems: [jekyll-paginate]
-author: skysper
-email: wtwpfwd0708@126.com
-auto: true
-markdown: rdiscount
-pygments: true
-highlighter: pygments
+
+markdown: kramdown
+kramdown:
+  input: GFM       # use Github Flavored Markdown !important
 exclude: ["Rakefile", "CNAME", "README.md"]
 permalink: /:year/:month/:title
 paginate: 10

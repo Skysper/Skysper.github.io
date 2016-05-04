@@ -19,7 +19,7 @@ layout: default
 	<p>{{ post.desc }}</p>
     {% endfor %}
   </ul>
-
+  {% include pager.html %}
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.url }}">via RSS</a></p>
 
 </div>

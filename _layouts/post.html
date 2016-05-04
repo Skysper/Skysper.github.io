@@ -12,5 +12,17 @@ layout: default
     {{ content }}
 	{% include article-quote.html %}
   </div>
-  
+
 </article>
+<script src="/gitProject/Skysper.github.io/_site/javascripts/highlight.pack.js" charset="utf-8"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+    $("code").each(function(){
+      $(this).wrap("<pre></pre>");
+      $(this).addClass("{{page.codelang}}");
+    });
+ });
+  console.log(hljs);
+  hljs.initHighlightingOnLoad();
+</script>
