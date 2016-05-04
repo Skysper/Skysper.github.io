@@ -15,11 +15,12 @@ url: "http://skysper.me" # the base hostname & protocol for your site
 
 
 # Build settings
+gems: [jekyll-paginate]
 author: skysper
 email: wtwpfwd0708@126.com
 markdown: rdiscount
 permalink: /:year/:month/:day/:title/
 exclude: ["Rakefile", "CNAME", "README.md"]
-pygments: true
+highlighter: pygments
 paginate: 10
 safe: true
