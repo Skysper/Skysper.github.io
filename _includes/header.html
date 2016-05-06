@@ -1,7 +1,26 @@
-<header>
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#m-menu-list" aria-expanded="false">
+				<span class="sr-only">菜单</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{{site.url}}">{{site.title}}</a>
+		</div>
+		<div class="collapse navbar-collapse" id="m-menu-list">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="{{site.url}}">首页</a></li>
+				<li ><a href="{{"/about.html"|prepend:site.url}}">关于我</a></li>
+			</ul>
+	   </div>
+	</div>
+</nav>
+<!--<header class="main-title">
       <div class="inner">
         <h1>Skysper.GitHub.io</h1>
         <h2>Skysper&#39;s blogs</h2>
         <a href="https://github.com/Skysper" class="button"><small>Follow me on</small> GitHub</a>
       </div>
-</header>
+</header>-->

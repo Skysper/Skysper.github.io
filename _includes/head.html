@@ -7,11 +7,13 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="{{"/stylesheets/stylesheet.css"|prepend:site.url}}" media="screen">
+  <!--<link rel="stylesheet" type="text/css" href="{{"/stylesheets/stylesheet.css"|prepend:site.url}}" media="screen">-->
 
-  <link rel="stylesheet" type="text/css" href="{{"/stylesheets/print.css"|prepend:site.url}}"  media="print">
+  <link rel="stylesheet" type="text/css" href="http://lib.sinaapp.com/js/bootstrap/latest/css/bootstrap.min.css"  media="screen">
   <link rel="stylesheet" type="text/css" href="{{"/stylesheets/agate.css"|prepend:site.url}}"  media="screen">
-
+  <link rel="stylesheet" type="text/css" href="../../stylesheets/style.css"  media="screen">
+  <link rel="stylesheet" type="text/css" href="{{"/stylesheets/style.css"|prepend:site.url}}"  media="screen">
+  <link rel="stylesheet" type="text/css" href="{{"/stylesheets/print.css"|prepend:site.url}}"  media="print">
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <!-- <![endif]-->

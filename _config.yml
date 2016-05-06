@@ -19,7 +19,7 @@ gems: [jekyll-paginate]
 markdown: kramdown
 kramdown:
   input: GFM       # use Github Flavored Markdown !important
-exclude: ["Rakefile", "CNAME", "README.md"]
+exclude: ["Rakefile", "CNAME", "README.md","params.json"]
 permalink: /:year/:month/:title
 paginate: 10
 paginate_path: "/page:num"
