@@ -24,7 +24,7 @@ layout: default
     {
       $("code").each(function(){
         var thisObj=$(this);
-        if(thisObj.parent().nodeName.toLowerCase()==="pre")
+        if(thisObj.parent().prop('tagName').toLowerCase()==="pre")
         {
           thisObj.parent().addClass(codeClass);
           return;
