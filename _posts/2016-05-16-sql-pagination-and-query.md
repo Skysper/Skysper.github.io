@@ -27,15 +27,12 @@ CREATE PROCEDURE [dbo].[proce_ArticlePaging]
 	@totalCount int output
 AS
 BEGIN
-	
 	declare @whereCondition nvarchar(1000);
 	Set @whereCondition=N' a.deleted=0 ';
-
 	if(@articleStatus>=0)
 	Begin
 	  Set @whereCondition +=' and a.status='+LTRIM(@articleStatus);
 	End
-
 	if(@itemType>=0 or @beginTime!=N''or @endTime!=N'')
 	 Begin
 	   declare @needAnd int;
