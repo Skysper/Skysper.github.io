@@ -19,12 +19,19 @@ layout: default
 <script type="text/javascript">
  $(document).ready(function(){
    var codeClass="{{page.codelang}}";
-    $("code").each(function(){
-      $(this).wrap("<pre></pre>");
-      $(this).addClass(codeClass);
-    });
+
     if(codeClass!=="")
     {
+      $("code").each(function(){
+        var thisObj=$(this);
+        if(thisObj.parent().nodeName.toLowerCase()==="pre")
+        {
+          thisObj.parent().addClass(codeClass);
+          return;
+        }
+        thisObj.wrap("<pre></pre>");
+        thisObj.addClass(codeClass);
+      });
       hljs.initHighlightingOnLoad();
     }
  });
