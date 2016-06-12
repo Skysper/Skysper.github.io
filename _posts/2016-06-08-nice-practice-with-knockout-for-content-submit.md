@@ -19,47 +19,46 @@ Knockout在实际项目中给了我很大的便利，让我从繁琐的Dom元素
 
 ```
 public class CarEvaluation:IEntity
+{
+    #region Id
+
+    private string m_Gid;
+
+    /// <summary>Gets or sets Id</summary>
+    public string Gid
     {
-
-        #region Id
-
-        private string m_Gid;
-
-        /// <summary>Gets or sets Id</summary>
-        public string Gid
-        {
-            get { return m_Gid; }
-            set { m_Gid = value; }
-        }
-
-        #endregion
-
-        #region CmId
-
-        private int m_cmId;
-
-        /// <summary>Gets or sets CmId</summary>
-        public int CmId
-        {
-            get { return m_cmId; }
-            set { m_cmId = value; }
-        }
-
-        #endregion
-
-
-        private String m_cmName;
-
-        /// <summary>Gets or sets CmName</summary>
-        public String CmName
-        {
-            get { return m_cmName; }
-            set { m_cmName = value; }
-        }
-
-        public Dictionary<string,object> Extends { set; get; }
-
+        get { return m_Gid; }
+        set { m_Gid = value; }
     }
+
+    #endregion
+
+    #region CmId
+
+    private int m_cmId;
+
+    /// <summary>Gets or sets CmId</summary>
+    public int CmId
+    {
+        get { return m_cmId; }
+        set { m_cmId = value; }
+    }
+
+    #endregion
+
+
+    private String m_cmName;
+
+    /// <summary>Gets or sets CmName</summary>
+    public String CmName
+    {
+        get { return m_cmName; }
+        set { m_cmName = value; }
+    }
+
+    public Dictionary<string,object> Extends { set; get; }
+
+}
 ```
 
 我们据此设计前端数据实体，此处为了简便，并没有对属性进行序列化调整，后面对此有一定依赖，亦可以另外调整。
