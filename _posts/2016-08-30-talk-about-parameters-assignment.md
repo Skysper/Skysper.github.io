@@ -4,7 +4,7 @@ tId: 1608301
 title: "浅谈函数参数中的引用传递"
 date: 2016-08-30 18:00:00 +0800
 categories: 引用,重构
-codelang: csharp
+codelang: javascript
 desc: "简单阐述下函数引用参数的原理，以及有关于此的重构思路"
 ---
 在函数调用中，参数一般分为值参数和引用参数，这个概念一般比较容易理念，原本并没有打算开篇记录。然而在最近阅读《重构-改善既有代码的设计》时，在看到Remove Assignments to Parameters的重构规则时，才发现理解这方面的内容对于编写良好的代码是有一定的辅助改善的作用的。
@@ -24,7 +24,6 @@ function paramTest(param)
 }
 paramTest(obj);//传参obj对象进去
 console.log(obj.nameNew);//obj代表的是Person的值，所以无nameNew属性
-
 ```
 
 在函数里面的操作，引用类型可以影响到原有的对象，但是当new新的Object的时候，这个int值改变了，param的值变成了Object对象的地址，之后对于param的操作都是针对新地址，新的对象的，自然不会影响param参数原来代表的对象。
