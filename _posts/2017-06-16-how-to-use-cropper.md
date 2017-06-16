@@ -69,6 +69,7 @@ autoCropArea：这里是一个比例值，设定默认情况下，截取的内�
 以上是截图处理部分，另外在后期上传的时候，可以通过form表单的方式进行（另外一种是通过将图片转化为Base64编码），这里通过$img.cropper("getCroppedCanvas")获取到canvas并调用其toBlob方法将数据转化为二进制用来构造FormData。
 
 ```
+<script>
 $img.cropper("getCroppedCanvas").toBlob(function(blob){
     var formData=new FormData();
     formData.append('files',blob,file.name);
@@ -84,6 +85,7 @@ $img.cropper("getCroppedCanvas").toBlob(function(blob){
         }
     });
 });
+</script>
 ```
 
 
