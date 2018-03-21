@@ -1,38 +1,38 @@
----
+ï»¿---
 layout: post
 tId: 1803001
-title: "CacheManager»º´æ¹ÜÀí¿ªÔ´¹¤¾ß"
+title: "CacheManagerç¼“å­˜ç®¡ç†å¼€æºå·¥å…·"
 date: 2018-03-21 22:53:00 +0800
-categories: redis,¼Ü¹¹,cache
+categories: redis,æ¶æ„,cache
 codelang: html
-desc: "×î½üÊ¹ÓÃcropperÍê³ÉÁËÏîÄ¿ÖĞµÄÍ¼Æ¬ÉÏ´«¹¦ÄÜ£¬·½±ãÇ¿´ó£¬ÊÇÍ¼Æ¬ÉÏ´«´¦ÀíµÄÒ»´óÀûÆ÷"
+desc: "æœ€è¿‘ä½¿ç”¨cropperå®Œæˆäº†é¡¹ç›®ä¸­çš„å›¾ç‰‡ä¸Šä¼ åŠŸèƒ½ï¼Œæ–¹ä¾¿å¼ºå¤§ï¼Œæ˜¯å›¾ç‰‡ä¸Šä¼ å¤„ç†çš„ä¸€å¤§åˆ©å™¨"
 ---
 
-> ±¾ÎÄÖ÷Òª½éÉÜÎÒµÄ¿ªÔ´ÏîÄ¿CacheManagerµÄÊ¹ÓÃËµÃ÷ºÍÌØĞÔ
+> æœ¬æ–‡ä¸»è¦ä»‹ç»æˆ‘çš„å¼€æºé¡¹ç›®CacheManagerçš„ä½¿ç”¨è¯´æ˜å’Œç‰¹æ€§
 > https://github.com/Skysper/CacheManager
 
-CacheManager¿ÉÒÔĞ­Öú¹ÜÀíÎÒÃÇÏîÄ¿Ó¦ÓÃÖĞÊ¹ÓÃµÄRedis¡¢Memcache»º´æ¼üÖµ¶Ô¡£
+CacheManagerå¯ä»¥ååŠ©ç®¡ç†æˆ‘ä»¬é¡¹ç›®åº”ç”¨ä¸­ä½¿ç”¨çš„Redisã€Memcacheç¼“å­˜é”®å€¼å¯¹ã€‚
 
-Ä¿Ç°ÒÑ¾­ÊµÏÖÁË¶ÔRedisµÄÖ§³Ö£¬Ö§³ÖµÄÊı¾İÀàĞÍ°üÀ¨String¡¢List¡¢Set¡¢SortedSet¡¢Hash£¬¿ÉÒÔĞŞ¸Ä¡¢É¾³ı¼üÖµ£¬ÉèÖÃ¹ıÆÚÊ±¼äµÈ¡£
+ç›®å‰å·²ç»å®ç°äº†å¯¹Redisçš„æ”¯æŒï¼Œæ”¯æŒçš„æ•°æ®ç±»å‹åŒ…æ‹¬Stringã€Listã€Setã€SortedSetã€Hashï¼Œå¯ä»¥ä¿®æ”¹ã€åˆ é™¤é”®å€¼ï¼Œè®¾ç½®è¿‡æœŸæ—¶é—´ç­‰ã€‚
 
-### 1. ´´½¨AppĞÅÏ¢
-![´´½¨App](//img-blog.csdn.net/20180321221325471?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+### 1. åˆ›å»ºAppä¿¡æ¯
+![åˆ›å»ºApp](//img-blog.csdn.net/20180321221325471?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-´´½¨appÓ¦ÓÃ£¬ÅäÖÃÁ¬½Ó×Ö·û´®£¬Ö§³ÖRedis¼¯Èº
+åˆ›å»ºappåº”ç”¨ï¼Œé…ç½®è¿æ¥å­—ç¬¦ä¸²ï¼Œæ”¯æŒRedisé›†ç¾¤
 
-### 2. Ìí¼ÓAppÖĞÊ¹ÓÃµ½µÄ¼üÖµ
-![Ó¦ÓÃÊ¹ÓÃ»º´æÏî](//img-blog.csdn.net/20180321221302912?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+### 2. æ·»åŠ Appä¸­ä½¿ç”¨åˆ°çš„é”®å€¼
+![åº”ç”¨ä½¿ç”¨ç¼“å­˜é¡¹](//img-blog.csdn.net/20180321221302912?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 
-##### ¼üÖµ¹æÔò
-»º´æKeyÖµÃû³Æ´´½¨¿ÉÒÔ°üº¬Á½ÖÖ·½Ê½:
+##### é”®å€¼è§„åˆ™
+ç¼“å­˜Keyå€¼åç§°åˆ›å»ºå¯ä»¥åŒ…å«ä¸¤ç§æ–¹å¼:
 
-- µ¥ÏîKeyÖµ - Ö±½Ó¶ÔÓ¦»º´æ·şÎñÆ÷ÖĞÌØ¶¨µÄKey£¬Èç: `sys:cache:maxTTL` µÈ
-- ÅúÁ¿KeyÖµ - ¶àÏîKeyÖµ£¬Ò»¶Ô¶àµÄÓ³Éä£¬´ËKey´ú±íÒ»¸öKeyÖµĞòÁĞ£¬¸ÃĞòÁĞÖ§³ÖÁ½ÖÖÄ£Ê½
-1. ÊıÖµÀàĞÍ£¬×Ô¶¯+1»ò-1²Ù×÷£¬Èç `sys:cache:news:{1-10000}`
-2. ×Ö·ûÀàĞÍ, ½öÖ§³ÖCharµ¥×Ö·ûĞÎÊ½£¬Èç `sys:cache:cluster{A-Z}`
+- å•é¡¹Keyå€¼ - ç›´æ¥å¯¹åº”ç¼“å­˜æœåŠ¡å™¨ä¸­ç‰¹å®šçš„Keyï¼Œå¦‚: `sys:cache:maxTTL` ç­‰
+- æ‰¹é‡Keyå€¼ - å¤šé¡¹Keyå€¼ï¼Œä¸€å¯¹å¤šçš„æ˜ å°„ï¼Œæ­¤Keyä»£è¡¨ä¸€ä¸ªKeyå€¼åºåˆ—ï¼Œè¯¥åºåˆ—æ”¯æŒä¸¤ç§æ¨¡å¼
+1. æ•°å€¼ç±»å‹ï¼Œè‡ªåŠ¨+1æˆ–-1æ“ä½œï¼Œå¦‚ `sys:cache:news:{1-10000}`
+2. å­—ç¬¦ç±»å‹, ä»…æ”¯æŒCharå•å­—ç¬¦å½¢å¼ï¼Œå¦‚ `sys:cache:cluster{A-Z}`
 
-Á½ÖÖÄ£Ê½¿ÉÒÔ»ìºÏÊ¹ÓÃ£¬Èç `sys:cache:cluster{A-Z}:news{1-1000}`,Ôò²éÑ¯µÄKey¼üÁĞ±íÎª:
+ä¸¤ç§æ¨¡å¼å¯ä»¥æ··åˆä½¿ç”¨ï¼Œå¦‚ `sys:cache:cluster{A-Z}:news{1-1000}`,åˆ™æŸ¥è¯¢çš„Keyé”®åˆ—è¡¨ä¸º:
 
 ```
 sys:cache:clusterA:news1
@@ -44,29 +44,29 @@ system.cache:clusterB:news1
 cache:clusterZ:news1000
 ```
 
-*×¢£º¶àÏîKeyÖµÄ£Ê½£¬ÊÊºÏÕë¶Ôµ¥±íId×ÔÔöµÈÓĞÊıÖµ»ò×Ö·û¹æÔòµÄÅúÁ¿»º´æ½øĞĞ¹ÜÀí*
+*æ³¨ï¼šå¤šé¡¹Keyå€¼æ¨¡å¼ï¼Œé€‚åˆé’ˆå¯¹å•è¡¨Idè‡ªå¢ç­‰æœ‰æ•°å€¼æˆ–å­—ç¬¦è§„åˆ™çš„æ‰¹é‡ç¼“å­˜è¿›è¡Œç®¡ç†*
 
-### 3.²éÑ¯¹ÜÀí
+### 3.æŸ¥è¯¢ç®¡ç†
 
-Éè¶¨»º´æµÄÖµºÍ¹ıÆÚÊ±¼ä
+è®¾å®šç¼“å­˜çš„å€¼å’Œè¿‡æœŸæ—¶é—´
 
-![¹ÜÀíTTL](//img-blog.csdn.net/20180321222914489?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![ç®¡ç†TTL](//img-blog.csdn.net/20180321222914489?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-²é¿´ÁĞ±í
-![»º´æ½á¹ûÁĞ±í](//img-blog.csdn.net/20180321223210160?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+æŸ¥çœ‹åˆ—è¡¨
+![ç¼“å­˜ç»“æœåˆ—è¡¨](//img-blog.csdn.net/20180321223210160?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-½á¹ûÁĞ±í¸ù¾İÅúÁ¿¼üÖµ¹æÔòÒÔ¼°·ÖÒ³Ò³ÂëÉú³Éµ±Ç°Ò³µÄ¾ßÌåKeyÖµ£¬ÁĞ³öµÄKeyÖµ²¢²»Ò»¶¨ÕæÊµ´æÔÚÓÚRedis»º´æÖĞ£¬ÁĞ±íÖĞÇ°ËÄÏîµÄ¼üÖµÀàĞÍ·Ö±ğÎªString¡¢List¡¢Set(Sorted Set)¡¢Hash
+ç»“æœåˆ—è¡¨æ ¹æ®æ‰¹é‡é”®å€¼è§„åˆ™ä»¥åŠåˆ†é¡µé¡µç ç”Ÿæˆå½“å‰é¡µçš„å…·ä½“Keyå€¼ï¼Œåˆ—å‡ºçš„Keyå€¼å¹¶ä¸ä¸€å®šçœŸå®å­˜åœ¨äºRedisç¼“å­˜ä¸­ï¼Œåˆ—è¡¨ä¸­å‰å››é¡¹çš„é”®å€¼ç±»å‹åˆ†åˆ«ä¸ºStringã€Listã€Set(Sorted Set)ã€Hash
 
-![HashµÄ¼üÖµÉèÖÃ](//img-blog.csdn.net/20180321223122806?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![Hashçš„é”®å€¼è®¾ç½®](//img-blog.csdn.net/20180321223122806?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-#### ÖµValueÉèÖÃ¹æÔò
+#### å€¼Valueè®¾ç½®è§„åˆ™
 - String 
 
 ```
-ÎÒ¿ÉÒÔÊäÈëÈÎÒâÄÚÈİ
+æˆ‘å¯ä»¥è¾“å…¥ä»»æ„å†…å®¹
 ```
 
-- List¡¢Set¡¢Sorted Set
+- Listã€Setã€Sorted Set
 
 ```
 value1
