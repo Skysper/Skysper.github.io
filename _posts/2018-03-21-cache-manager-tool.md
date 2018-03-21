@@ -14,12 +14,12 @@ CacheManager可以协助管理我们项目应用中使用的Redis、Memcache缓�
 目前已经实现了对Redis的支持，支持的数据类型包括String、List、Set、SortedSet、Hash，可以修改、删除键值，设置过期时间等。
 
 ### 1. 创建App信息
-![创建App](//img-blog.csdn.net/20180321221325471?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![创建App]({{"/images/cache-manager-tool-1.png"|prepend:site.url}})
 
 创建app应用，配置连接字符串，支持Redis集群
 
 ### 2. 添加App中使用到的键值
-![应用使用缓存项](//img-blog.csdn.net/20180321221302912?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![应用使用缓存项]({{"/images/cache-manager-tool-2.png"|prepend:site.url}})
 
 
 ##### 键值规则
@@ -48,14 +48,14 @@ cache:clusterZ:news1000
 
 设定缓存的值和过期时间
 
-![管理TTL](//img-blog.csdn.net/20180321222914489?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![管理TTL]({{"/images/cache-manager-tool-3.png"|prepend:site.url}})
 
 查看列表
-![缓存结果列表](//img-blog.csdn.net/20180321223210160?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![缓存结果列表]({{"/images/cache-manager-tool-4.png"|prepend:site.url}})
 
 结果列表根据批量键值规则以及分页页码生成当前页的具体Key值，列出的Key值并不一定真实存在于Redis缓存中，列表中前四项的键值类型分别为String、List、Set(Sorted Set)、Hash
 
-![Hash的键值设置](//img-blog.csdn.net/20180321223122806?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L3dwZkxvdmU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![Hash的键值设置]({{"/images/cache-manager-tool-5.png"|prepend:site.url}})
 
 #### 值Value设置规则
 - String 
