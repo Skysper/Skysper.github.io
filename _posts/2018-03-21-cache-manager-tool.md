@@ -8,9 +8,7 @@ codelang: html
 desc: "最近使用cropper完成了项目中的图片上传功能，方便强大，是图片上传处理的一大利器"
 ---
 
-> 本文主要介绍我的开源项目CacheManager的使用说明和特性
-> https://github.com/Skysper/CacheManager
-
+本文主要介绍我的开源项目CacheManager的使用说明和特性
 CacheManager可以协助管理我们项目应用中使用的Redis、Memcache缓存键值对。
 
 目前已经实现了对Redis的支持，支持的数据类型包括String、List、Set、SortedSet、Hash，可以修改、删除键值，设置过期时间等。
@@ -27,12 +25,12 @@ CacheManager可以协助管理我们项目应用中使用的Redis、Memcache缓�
 ##### 键值规则
 缓存Key值名称创建可以包含两种方式:
 
-- 单项Key值 - 直接对应缓存服务器中特定的Key，如: `sys:cache:maxTTL` 等
+- 单项Key值 - 直接对应缓存服务器中特定的Key，如: sys:cache:maxTTL 等
 - 批量Key值 - 多项Key值，一对多的映射，此Key代表一个Key值序列，该序列支持两种模式
-1. 数值类型，自动+1或-1操作，如 `sys:cache:news:{1-10000}`
-2. 字符类型, 仅支持Char单字符形式，如 `sys:cache:cluster{A-Z}`
+1. 数值类型，自动+1或-1操作，如 sys:cache:news:{1-10000}
+2. 字符类型, 仅支持Char单字符形式，如 sys:cache:cluster{A-Z}
 
-两种模式可以混合使用，如 `sys:cache:cluster{A-Z}:news{1-1000}`,则查询的Key键列表为:
+两种模式可以混合使用，如 sys:cache:cluster{A-Z}:news{1-1000},则查询的Key键列表为:
 
 ```
 sys:cache:clusterA:news1
