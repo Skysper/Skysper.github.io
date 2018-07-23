@@ -64,12 +64,20 @@ cache:clusterZ:news1000
 我可以输入任意内容
 ```
 
-- List、Set、Sorted Set
+- List、Set
 
 ```
 value1
 value2
 value3
+```
+
+- Sorted Set
+
+```
+key1$$score1
+key2$$score2
+key3$$score3
 ```
 
 - Hash
