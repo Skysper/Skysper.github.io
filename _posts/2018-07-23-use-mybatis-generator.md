@@ -1,7 +1,7 @@
 ---
 layout: post
 tId: 1807001
-title: "使用mybatis generator生成代码"
+title: "在spring boot中使用mybatis generator生成代码"
 date: 2018-07-23 18:00:00 +0800
 categories: spring boot,mybatis,generator
 codelang: java
