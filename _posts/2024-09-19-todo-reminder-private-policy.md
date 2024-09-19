@@ -1,13 +1,12 @@
 ---
 layout: post
 tId: 1807002
-title: "在spring boot中使用mybatis generator生成代码"
+title: "[Todo Reminder] 隐私政策"
 date: 2024-09-20 00:18:00 +0800
 categories: private policy
 codelang: text
 desc: "[Todo Reminder] 隐私政策"
 ---
-## 《[Todo Reminder] 隐私政策》
 生效日期：2024 年 9 月 20 日
 ### 一、引言
 本隐私政策适用于 [Todo Reminder]，旨在向你说明我们如何收集、使用和披露你的个人信息。我们高度重视你的隐私，并致力于保护你的个人信息安全。
